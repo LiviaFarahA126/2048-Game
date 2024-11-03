@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048 Game</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="top-buttons">
+        <a href="mailto:liviafarahaisyah@gmail.com" class="feedback-button">Give Feedback</a>
+        <button id="new-game-button" class="new-game-button">New Game</button>
+    </div>
+    
+    <div class="container hide">
+        <div class="heading">
+            <h1>2048</h1>
+            <div class="score-container">
+                <div>
+                    <div>SCORE</div>
+                    <div id="score">0</div>
+                </div>
+                <div>
+                    <div>BEST</div>
+                    <div id="best-score">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid"></div>
+
+        <div class="button-container">
+            <button id="undo-button" class="action-button" onclick="handleUndo()" disabled>
+                Undo (<span id="undo-count">0</span>)
+            </button>
+            <button id="swap-button" class="action-button" onclick="startSwap()" disabled>
+                Swap (<span id="swap-count">0</span>)
+            </button>
+            <button id="delete-button" class="action-button" onclick="startDelete()" disabled>
+                Delete (<span id="delete-count">0</span>)
+            </button>
+        </div>
+    </div>
+    
+    <div class="cover-screen">
+        <h2 id="over-text" class="hide">Game Over</h2>
+        <p id="result"></p>
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
