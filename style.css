@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f1f3f8;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    color: #3b3b3b;
+}
+
+h1 {
+    font-size: 4em;
+    color: #6b58c4;
+}
+
+.score-container {
+    color: #3b3b3b;
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+}
+
+.score-container div {
+    background-color: #84a9ac;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#score, #best-score {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.grid {
+    width: 25em;
+    height: 25em;
+    background-color: #d1e3e3;
+    border: 5px solid #84a9ac;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5em;
+    margin: 0 auto 1em;
+}
+
+.box {
+    width: 97.5px;
+    height: 97.5px;
+    border: 3px solid #84a9ac;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b3b3b;
+    border-radius: 8px;
+}
+
+.button-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.action-button {
+    background-color: #6b58c4;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.action-button:disabled {
+    background-color: #d1e3e3;
+    cursor: not-allowed;
+}
+
+.cover-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(241, 243, 248, 0.95);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    padding: 2em;
+}
+
+#start-button {
+    background-color: #6b58c4;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+/* Tile colors with a balanced palette */
+.box-2 { background-color: #c4e3e3; }
+.box-4 { background-color: #a4c4c4; }
+.box-8 { background-color: #6b8c8c; color: white; }
+.box-16 { background-color: #8f4f5f; color: white; }
+.box-32 { background-color: #b96d76; color: white; }
+.box-64 { background-color: #d48182; color: white; }
+.box-128 { background-color: #e68f96; color: white; }
+.box-256 { background-color: #f5a3a1; color: white; }
+.box-512 { background-color: #f5727e; color: white; }
+.box-1024 { background-color: #d15061; color: white; }
+.box-2048 { background-color: #a33f47; color: white; }
+
+/* Game Over Screen Styling */
+.game-over-heading {
+    font-size: 2em;
+    color: #3b3b3b;
+    margin-bottom: 0.5em;
+}
+
+.powerup-summary {
+    display: flex;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.powerup-summary span {
+    font-size: 1.2em;
+}
+
+.result-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.game-over-button {
+    background-color: #6b58c4;
+    color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.game-over-button:disabled {
+    background-color: #d1e3e3;
+}
+
+/* Smaller Tile Layout for Game Over */
+.small-grid {
+    width: 15em;
+    height: 15em;
+    background-color: #d1e3e3;
+    border: 5px solid #84a9ac;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5em;
+}
+
+.small-box {
+    width: 65px;
+    height: 65px;
+    font-size: 20px;
+}
+
+/* Top Buttons for Feedback and New Game */
+.top-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 1em;
+}
+
+.feedback-button {
+    text-decoration: none;
+    background-color: #6b6b83;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+}
+
+.new-game-button {
+    background-color: #6b6b83;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
